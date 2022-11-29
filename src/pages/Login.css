@@ -1,0 +1,21 @@
+.login-card {
+    width: 50%;
+    margin: auto;
+}
+
+/* .btn-login{
+    width: max-content;
+} */
+
+.btn-login-item {
+    text-align: center;
+}
+
+.card {
+    background: rgb(4, 0, 22);
+}
+
+.error-msg {
+    text-align: center;
+    color: rgb(252, 36, 36);
+}
