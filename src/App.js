@@ -1,23 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { getLorem } from './store/features/lorem/LoremSlice';
+import { authentication } from './store/features/auth/authSlice';
 
 function App() {
+  const dispatch = useDispatch()
+  const data = useSelector(state => state.lorem)
+  const auth = useSelector(state => state.auth)
+
+  const user = {
+    "email": "jone@supersimple.com",
+    "password": "htJhone@2434"
+  }
+
+
+  useEffect(() => {
+    // dispatch(getLorem())
+    dispatch(authentication(user))
+    // console.log(data);
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {JSON.stringify(auth)}
     </div>
   );
 }
