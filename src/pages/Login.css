@@ -1,12 +1,8 @@
 .login-card {
-    width: 50%;
     padding-top: 5%;
-    margin: auto;
+    margin: 0;
+    text-align: left;
 }
-
-/* .btn-login{
-    width: max-content;
-} */
 
 .btn-login-item {
     text-align: center;

@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import { AuthProvider } from './Auth';
 import { ProtectedRoutes } from './ProtectedRoutes';
+import NotFound404 from './pages/error-pages/NotFound-404';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Login />} />
             <Route path='/dashboard' element={<ProtectedRoutes><Dashboard /></ProtectedRoutes>} />
-            <Route path='*' element={<h1> Not found 404 </h1>} />
+            <Route path='*' element={<NotFound404 />} />
           </Routes>
         </div>
       </AuthProvider>
